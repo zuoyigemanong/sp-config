@@ -11,3 +11,11 @@ spring:
 server:  port: 8101
   
 eureka:  client:    service-url:      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      
+ #spring cloud 配置中心动态刷新配置，暴露refresh端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+      
